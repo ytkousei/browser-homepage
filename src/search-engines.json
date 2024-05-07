@@ -1,0 +1,9 @@
+{
+  "g": ["https://www.google.co.jp/search", "q"],
+  "b": ["https://www.bing.com/search", "q"],
+  "yt": ["https://www.youtube.com/results?", "search_query"],
+  "q": ["https://qiita.com/search", "q"],
+  "z": ["https://zenn.dev/search", "q"],
+  "t": ["https://twitter.com/search", "q"],
+  "gh": ["https://github.com/search", "q"]
+}
