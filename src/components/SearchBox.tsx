@@ -35,7 +35,7 @@ export default function SearchBox() {
 
   return (
     <form
-      className="flex items-center justify-center w-80 h-13 bg-neutral-500"
+      className="flex items-center justify-center w-full h-13 bg-neutral-500"
       onSubmit={onSubmit}
     >
       <MdSearch />
@@ -43,8 +43,13 @@ export default function SearchBox() {
         ref={searchBoxRef}
         className="w-full outline-none bg-transparent"
         type="text"
+        list="engines"
       />
-      <MdClose />
+      <datalist id="engines">
+        {Object.keys(engines).map((engine, index) => {
+          return <option key={index} value={engine}></option>;
+        })}
+      </datalist>
     </form>
   );
 }

@@ -10,9 +10,9 @@ export default function Home() {
 
   return (
     <main className="container mx-auto">
-      <div className="flex  bg-neutral-800">
-        <SearchBox />
-        <Clock />
+      <SearchBox />
+      <div>
+        <div className="flex"></div>
       </div>
     </main>
   );

@@ -7,8 +7,13 @@ export default function Clock() {
 
   return (
     <div>
-      <p>
-        {time.getHours()}:{time.getMinutes()}:{time.getSeconds()}
+      <p className="text-neutral-100">
+        {Intl.DateTimeFormat("ja", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }).format(time)}
+        {/* {time.getHours()}:{time.getMinutes()}:{time.getSeconds()} */}
       </p>
     </div>
   );
