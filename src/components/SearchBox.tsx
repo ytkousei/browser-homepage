@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useRef } from "react";
+import { FormEvent, useEffect, useRef } from "react";
 import { MdClose, MdSearch } from "react-icons/md";
 import engines from "../search-engines.json";
 
@@ -17,11 +17,16 @@ export default function SearchBox() {
 
     //@ts-ignore
     let engine: string[] = engines[words[0]];
-    if (!engine) engine = engines.g;
 
-    let searchStr = words.slice(1).join(" ");
+    let search = "";
+    if (engine) {
+      search = words.slice(1).join(" ");
+    } else {
+      engine = engines.g;
+      search = words.join(" ");
+    }
 
-    searchBox.value = searchStr;
+    searchBox.value = search;
     form.action = engine[0];
     searchBox.name = engine[1];
 
