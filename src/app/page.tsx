@@ -12,7 +12,7 @@ export default function Home() {
     <main className="container mx-auto">
       <div className="flex  bg-neutral-800">
         <SearchBox />
-        {/* <Clock /> */}
+        <Clock />
       </div>
     </main>
   );
